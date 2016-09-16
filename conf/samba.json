@@ -1,0 +1,23 @@
+{
+  "alias": "samba",
+  "hostname": "samba",
+  "brand": "lx",
+  "kernel_version": "4.7.3",
+  "max_physical_memory": 2048,
+  "quota": 32,
+  "image_uuid": "3da6330e-388d-11e6-b41b-d766707c6c3d",
+  "resolvers": ["8.8.8.8","8.8.4.4"],
+  "nics": [
+    {
+      "nic_tag": "switch0",
+      "ip": "172.16.0.5",
+      "netmask": "255.255.255.0",
+      "gateway": "172.16.0.1",
+      "primary": "1"
+    }
+  ],
+  "customer_metadata": {
+      "root_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdLQRKLDKV40+3zGfXSJ6R9Vg5sNzrzGbyVvPRKJ14qt7mZgfv06MRMQN7qjIqeAGt0bMXMEypSwgLP84eJpsyEjkZrF+llMad7sG3ganfP+qWmQeBMU+pV6e2F0sIUtwzA8dKQn3jDuyuvr2LYF8TA2lAq+5CqKPRLHhDZYw373zc+z1KHFKEcjasLwcAmUhAIyXJfK49sQs+FYVYVr5koUX1OFLKlwipQcgTV59W/mcxkqtMYQz0YsfarAG5Pb9FLZyFRE36Ck3Jod6aQCgj6ipfRZ3vNa4CRBKWn7BvDm012exaD5Ddsjg4fp4RnIIvsfSIAWSRU/+pTC8hN3lR danilo",
+      "user-script" : "/usr/sbin/mdata-get root_authorized_keys > ~root/.ssh/authorized_keys ; /usr/sbin/mdata-get root_authorized_keys > ~admin/.ssh/authorized_keys"
+  }
+}
