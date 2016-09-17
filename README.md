@@ -21,7 +21,9 @@ svcadm enable svc:/smartos/setup:default
 # ipnat
 
 ```
+cat << EOF >> /etc/ipf/ipnat.conf
 map e1000g0 172.16.0.0/12 -> 0/32
+EOF
 
 /usr/sbin/ipf -E -Fa -v -f /etc/ipf/ipf.conf
 /usr/sbin/ipnat -C -v -f /etc/ipf/ipnat.conf
@@ -35,10 +37,16 @@ svcs -l
 cat `svcs -L svc:/smartos/setup:default`
 ```
 
-# ntpd [ /etc/inet/ntp.conf ]
+# ntpd
 
 ```
+cat << EOF >> /etc/inet/ntp.conf
+
 interface ignore wildcard
 interface listen 127.0.0.1
 interface listen ::1
+EOF
+
+svcadm restart svc:/network/ntp:default
+
 ```
