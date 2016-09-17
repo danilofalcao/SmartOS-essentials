@@ -32,7 +32,7 @@ EOF
 # logs
 
 ```
-svcs -l
+svcs -L
 
 cat `svcs -L svc:/smartos/setup:default`
 ```
