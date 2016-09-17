@@ -1,4 +1,4 @@
-# SmartOS
+# SmartOS essentials
 
 # Author: dfs @ freenode
 
@@ -27,20 +27,12 @@ map e1000g0 172.16.0.0/12 -> 0/32
 /usr/sbin/ipnat -C -v -f /etc/ipf/ipnat.conf
 ```
 
-# services
-
-```
-svcs -a
-
-svcadm restart nginx
-```
-
 # logs
 
 ```
 svcs -l
 
-svcs -L svc:/network/ipfilter:default
+cat `svcs -L svc:/smartos/setup:default`
 ```
 
 # ntpd [ /etc/inet/ntp.conf ]
