@@ -4,13 +4,13 @@
  "fs_allowed": "ufs,pcfs,tmpfs",
  "alias": "rock",
  "hostname": "rock",
- "max_physical_memory": 4096,
+ "max_physical_memory": 8192,
  "quota": 32,
  "resolvers": ["8.8.8.8", "8.8.4.4"],
  "nics": [
   {
     "nic_tag": "switch0",
-    "ip": "172.16.0.3",
+    "ip": "172.16.0.2",
     "netmask": "255.255.255.0",
     "gateway": "172.16.0.1"
   }
