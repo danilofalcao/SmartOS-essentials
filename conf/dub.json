@@ -1,0 +1,29 @@
+{
+  "brand": "kvm",
+  "alias": "dub",
+  "hostname": "dub",
+  "resolvers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "ram": "4096",
+  "vcpus": "4",
+  "nics": [
+    {
+      "nic_tag": "switch0",
+      "ip": "172.16.0.5",
+      "netmask": "255.255.255.0",
+      "gateway": "172.16.0.1",
+      "model": "virtio",
+      "primary": true
+    }
+  ],
+  "disks": [
+    {
+      "boot": true,
+      "model": "virtio",
+      "size": 32768,
+      "compression": "on"
+    }
+  ]
+}
