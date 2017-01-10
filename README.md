@@ -6,7 +6,7 @@
 
 ```
 cd /
-curl -k http://pkgsrc.joyent.com/packages/SmartOS/bootstrap/bootstrap-2016Q3-x86_64.tar.gz | gzcat | tar -xf -
+curl -k http://pkgsrc.joyent.com/packages/SmartOS/bootstrap/bootstrap-2016Q4-x86_64.tar.gz | gzcat | tar -xf -
 pkg_admin rebuild
 pkgin -y up
 ```
